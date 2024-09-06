@@ -6,7 +6,7 @@ students = [{"id":1, "name":"ibrahim"}, {"id":2, "name":"mostafa"}, {"id":3, "na
 
 @app.route("/")
 def home_page():
-    return render_template("home.html", students_data=students)
+    return render_template("home.html", students=students)
 
 @app.route("/search/<int:id>")
 def search(id):
