@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+</head>
+<body>
+    {% if is_found == True %}
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+            <tr>
+                <td>{{target_student['id']}}</td>
+                <td>{{target_student['name']}}</td>
+            </tr>
+        </table>
+    {%else%}
+        <p>Not Found</p>
+    {% endif %}
+    <table>
+
+    </table>
+</body>
+</html>
