@@ -6,13 +6,10 @@ students = [{"id":1, "name":"Ahmed"}, {"id":2, "name":"Mohamed"}, {"id":3, "name
 
 @app.route("/")
 def home_page():
-    # global students # for modification
 
-    # return {"id": 1, "name":"Ahmed"}
-    # return "<h1>Home Page</h1>"
     return render_template("index.html", students_data=students)
 
-@app.route("/search/<int:id>") # search/1 => data in table of user that has id=1
+@app.route("/search/<int:id>")
 def search(id):
     is_found = False
     target_student = None
@@ -25,5 +22,4 @@ def search(id):
 
 
 if __name__ == "__main__":
-    # print(app.url_map)
     app.run(debug=True, port=5000)
