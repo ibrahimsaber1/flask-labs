@@ -2,12 +2,11 @@ from flask import Flask, render_template, redirect, url_for
 
 
 app = Flask(__name__)
-students = [{"id":1, "name":"Ahmed"}, {"id":2, "name":"Mohamed"}, {"id":3, "name":"Youssef"}]
+students = [{"id":1, "name":"ibrahim"}, {"id":2, "name":"mostafa"}, {"id":3, "name":"zaky"},{"id":3, "name":"nour"}]
 
 @app.route("/")
 def home_page():
-
-    return render_template("index.html", students_data=students)
+    return render_template("home.html", students_data=students)
 
 @app.route("/search/<int:id>")
 def search(id):
