@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Student</title>
+  </head>
+  <body>
+    <h1>Student Search</h1>
+
+    {% for student in students %} {% if student.id == studentId %}
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+      </tr>
+    </table>
+    {% endif %} {% endfor %}
+  </body>
+</html>
